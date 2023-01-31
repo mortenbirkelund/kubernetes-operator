@@ -75,8 +75,7 @@ jenkins:
 
   # Enables customization of the Service Account attached to the master Jenkins instance via annotations
   # https://jenkinsci.github.io/kubernetes-operator/docs/getting-started/latest/schema/#github.com/jenkinsci/kubernetes-operator/api/v1alpha2.ServiceAccount
-  serviceAccount:
-    annotations: {}
+  serviceAccount: {}
 
   # basePlugins are plugins installed and required by the operator
   # Shouldn't contain plugins defined by user
@@ -133,7 +132,7 @@ jenkins:
   # See https://kubernetes.io/docs/concepts/configuration/manage-compute-resources-container/ for details
   resources:
     limits:
-      cpu: 1000m
+      cpu: '1'
       memory: 3Gi
     requests:
       cpu: 250m
